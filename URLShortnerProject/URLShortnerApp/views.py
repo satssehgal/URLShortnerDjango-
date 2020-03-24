@@ -56,7 +56,7 @@ def checkIDExists(ID): #Check to see if ID exists in DB
     else:
         U=URLData(URLID=ID, ShortURL=sc)
         U.save()
-        mess=("Your shortened URL is {}/{}".format(service_url,sc))
+        mess=("Congratulatons! Your shortened URL is {}/{}".format(service_url,sc))
     return mess
 
 def redirect_short_url(request, short_url):
