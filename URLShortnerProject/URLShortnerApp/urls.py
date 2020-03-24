@@ -1,8 +1,9 @@
+from django.contrib import admin
 from django.urls import path, include
-from . import views
+from URLShortnerApp import views
+from . import settings
 
 urlpatterns = [
-    path('shorten/', views.get_form, name='urlform'),
-    path('<short_url>/', views.redirect_short_url, name='redirectpath'),
-    #path('<slug:my_url>', views.redirect_short_url,name='redirectpath'),
+    path('admin/', admin.site.urls),
+    path('', include('URLShortnerApp.urls')),
 ]
