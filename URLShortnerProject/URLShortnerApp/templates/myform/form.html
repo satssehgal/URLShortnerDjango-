@@ -2,20 +2,131 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<title>URL Shortner</title>
 </head>
 <body>
-	<form method='post'>
-		{% csrf_token %}
-		{{form|linebreaks}}
-		<button type='submit'>Submit</button>
-	</form>
-	{% if messages %}
-	<ul class="messages">
-	{% for message in messages %}
-	<li {% if message.tags %} class="{{message.tags}}" {% endif %}> {{message }} </li>
-	{% endfor %}
-	</ul>
-	{% endif %}
+
+	<div class="row pt-1"></div>
+	<div class="container">
+	  <div class="row">
+<div class="col-9"></div>
+<div class="col-3 text-right ">
+			<table align="right" style="width:50%">
+			  <tr>
+			    <th><a href="#" style="color: orange">Sign Up</a></th>
+			    <th><a href="#" style="color: orange">Login</a>
+			    </th> 
+			  </tr>
+			</table>
+
+</div>
+		
+
+	  </div>
+	 </div>
+
+
+
+	<div class="container">
+	  <div class="row">
+	    <div class="col-3"></div>
+	    <div class="col-6 text-left">
+	      	<table style="width:90%">
+			  <tr>
+			    <th><a href="#" style="color: green">Home</a></th>
+			    <th><a href="#" style="color: green">Services</a></th> 
+			    <th><a href="#" style="color: green">Pricing</a></th>
+			    <th><a href="#" style="color: green">About</a></th>
+			    <th><a href="#" style="color: green">FAQ</a></th>
+			  </tr>
+			</table>
+	    </div>
+	    <div class="col-3 text-right">
+    	</div>	
+	 </div>
+
+</div>
+
+
+    <div class="container">
+    
+
+    	<div class="row pt-5"></div>
+    	<div class="row pt-3"></div>
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <h1 class="mt-4 text-center">  <p style="color: orange"><b>URL</b><i style="color: green">Shortly</i></p>
+          <hr class="mt-4 mb-4"></h1>
+          <div class="row pt-3"></div>
+
+        </div>
+      </div>
+    </div>
+
+<div class="col-3 bg-warning"></div>   
+<div class="col-12 bg-warning">
+<div class="container bg-warning"></div>
+		
+	<div class="container bg-warning">
+		<div class="row pt-5"></div>
+    	<div class="row pt-5"></div>
+    	<div class="row pt-5"></div>
+		<div class="row justify-content-center">
+		
+			{% load bootstrap4 %}
+			{% block content %}
+			<h2>
+			  <form method="post">
+			    {% csrf_token %}
+			    {{ form.EnterURL }}
+			    <button type="submit" , class="btn btn-success text-center">Shorten</button>
+			  </form></h2>
+			{% endblock %}
+
+			{% if messages %}
+			<ul class="messages">
+			{% for message in messages %}
+			<br><br>
+			<h5 {% if message.tags %} class="{{message.tags}}" {% endif %}> {{message }} </h5>
+			{% endfor %}
+			</ul>
+			{% endif %}
+	 	</div>
+      </div>
+    </div>
+   
+
+<div class="col-18 bg-warning">
+     <div class="container">  
+     	<div class="row pt-5 bg-warning"></div>
+     	<div class="row pt-4 bg-warning"></div>
+     	<div class="row pt-5"></div>
+     </div>
+ </div>
+ <div class="row pt-2"></div>
+ <h3 class="mt-4 text-center">  <p style="color: green"><b>Made</b><i style="color: orange"> with:</i></p></h3>
+          
+ <div class="container"> 
+ 	<div class="col-3 text-center"></div>
+	<div class="row pt-5"></div>
+  		<div class="row pt-2">
+
+ 
+    <div class="col-sm text-center">
+      {% load static %}
+		<img src="{% static 'django.png' %}" alt="Django" style="width:30%">
+  </div>
+    <div class="col-sm text-center">
+      {% load static %}
+		<img src="{% static 'python.png' %}" alt="Python" style="width:30%">
+    </div>
+    <div class="col-sm text-center">
+      {% load static %}
+		<img src="{% static 'bootstrap.png' %}" alt="Bootstrap" style="width:30%">
+    </div></div>
+  </div>
+</div>
 </body>
 </html>
