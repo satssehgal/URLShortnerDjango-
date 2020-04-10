@@ -18,7 +18,7 @@ import random
 #Declare Key Varaibles
 BASE_LIST='0123456789abcdefghijklmnopqrstuvwxyz./:'
 BASE_DICT=dict((c,idx) for idx,c in enumerate(BASE_LIST))
-service_url='http://localhost:8001'
+service_url='friggintechnology.com'
 
 class FullURLView(viewsets.ModelViewSet):
 	queryset=URLData.objects.all()
@@ -52,7 +52,7 @@ def checkIDExists(ID): #Check to see if ID exists in DB
     Retreived_IDs=list(URLData.objects.values_list('URLID', flat=True))
     if str(ID) in Retreived_IDs:
         surl=URL_ID=URLData.objects.all().filter(URLID=str(ID))[0].ShortURL
-        mess="Record Already Exists. \n\nLink is: {}/{}".format(service_url,surl)
+        mess=("Record Already Exists. The Shortened Link is: {}/{}".format(service_url,surl))
     else:
         U=URLData(URLID=ID, ShortURL=sc)
         U.save()
@@ -66,14 +66,22 @@ def redirect_short_url(request, short_url):
         redirect_url = base_encode(int(URL_ID))
     except Exception as e:
         print (e)
-    return redirect(redirect_url)       
+    return redirect(redirect_url)   
+
+def appendPrefix(entry):
+    match=['http','https']
+    if any(x in entry for x in match):
+        return entry
+    else:
+        return('https://'+str(entry))
 
 def get_form(request):
     if request.method=='POST':
         form=URLDataForm(request.POST)
         if form.is_valid():
             fullurl=form.cleaned_data['EnterURL']
-            ID=base_decode(fullurl.lower())
+            fullurladj=appendPrefix(fullurl)
+            ID=base_decode(fullurladj.lower())
             messages.success(request, '{}'.format(checkIDExists(ID)))
     form=URLDataForm()
     return render(request, 'myform/form.html', {'form':form})
