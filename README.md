@@ -76,3 +76,8 @@ run <b> sudo apt install nginx libpq-dev</b>
 
 Step 16: Check to see if gunicorn can host your django project. Change URLShortnerProject to whatever your project is called<br/>
 run <b>gunicorn --bind 0.0.0.0:8000 URLShortnerProject.wsgi</b>
+
+Step 17: Deactivate venv and Create gunicorn systemd file<br/>
+run <b>deactivate</b>. The (venv) on terminal line should be gone<br/>
+run <b> sudo nano /etc/systemd/system/gunicorn.service</b><br>
+
