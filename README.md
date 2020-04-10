@@ -20,7 +20,7 @@ Step 4: Connect host ip and hostname
 Step 5: Install some dependencies
 <br/>run <b>sudo apt install python-pip virtualenv ufw</b>
 
-Step 6: Set up some firewall rules and enable
+Step 6: Set up some firewall rules and enable<br/>
 <b>
 sudo ufw default allow outgoing<br/>
 sudo ufw default deny incoming<br/>
