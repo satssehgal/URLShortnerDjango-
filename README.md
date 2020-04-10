@@ -46,25 +46,25 @@ run <b>```ssh-copy-id username@IP```</b> to push them to your server<br/>
 optional: If you have multiple ssh key pairs then run <b> ```ssh-add ~/.ssh/{name of ssh key}``` </b>
 
 Step 9:Remove root login and password auth<br/>
-run <b>sudo nano /etc/ssh/sshd_config</b><br/>
+run <b>```sudo nano /etc/ssh/sshd_config```</b><br/>
 Set permit root login to no and uncomment passwordauthentication and set it to no<br/>
 
 Step 10: Reboot the server<br/>
-run <b>sudo reboot</b>
+run <b>```sudo reboot```</b>
 
 ### Deploy Django Project to Server
 
 Step 11: Change to your virtualenv<br/>
-run <b>virtualenv vevn -p python3</b><br/>
-run <b>source venv/bin/activate</b><br/>
+run <b>```virtualenv vevn -p python3```</b><br/>
+run <b>```source venv/bin/activate```</b><br/>
 You should now see something like (venv) on your terminal line
 
 Step 12: Transfer Django project from local computer to server<br/>
-run <b>scp -r {local path to project folder}  username@IP:~/</b>
+run <b>```scp -r {local path to project folder}  username@IP:~/```</b>
 
 Step 13: Update settings.py. Navigate to settings.py in your project folder <br/>
-Update Allowed_Hosts =['Add Your IP or Domain Name']<br/>
-Add static root with the following command <b>STATIC_ROOT = os.path.join(BASE_DIR, ‘static')</b> to the settings file<br/>
+Update ```Allowed_Hosts =['Add Your IP or Domain Name']```<br/>
+Add static root with the following command <b>```STATIC_ROOT = os.path.join(BASE_DIR, ‘static')```</b> to the settings file<br/>
 Save and exit
 
 Step 14: Back out to the directory that has manage.py<br/>
