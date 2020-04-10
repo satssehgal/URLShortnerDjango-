@@ -18,17 +18,16 @@ Step 4: Connect host ip and hostname
 <br/>run <b>nano /etc/hosts</b> and add your server ip, click tab and then your hostname (from step 3)
 
 Step 5: Install some dependencies
-
-run <b>sudo apt install python-pip virtualenv ufw</b>
+<br/>run <b>sudo apt install python-pip virtualenv ufw</b>
 
 Step 6: Set up some firewall rules and enable
 
-sudo ufw default allow outgoing
-sudo ufw default deny incoming
-sudo ufw allow ssh
-sudo ufw allow 8000
-sudo ufw enable
-sudo ufw status (check to ensure its up and running)
+sudo ufw default allow outgoing<br/>
+sudo ufw default deny incoming<br/>
+sudo ufw allow ssh<br/>
+sudo ufw allow 8000<br/>
+sudo ufw enable<br/>
+sudo ufw status (check to ensure its up and running)<br/>
 
 Step 7: Create a limited user and give sudo privlidges
 
