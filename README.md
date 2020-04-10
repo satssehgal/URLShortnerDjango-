@@ -74,5 +74,5 @@ Step 15: Install Gunicorn and Nginx<br/>
 run <b> pip install gunicorn</b><br/>
 run <b> sudo apt install nginx libpq-dev</b>
 
-Step 16: Check to see if gunicorn can host your django project<br/>
+Step 16: Check to see if gunicorn can host your django project. Change URLShortnerProject to whatever your project is called<br/>
 run <b>gunicorn --bind 0.0.0.0:8000 URLShortnerProject.wsgi</b>
