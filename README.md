@@ -80,4 +80,18 @@ run <b>gunicorn --bind 0.0.0.0:8000 URLShortnerProject.wsgi</b>
 Step 17: Deactivate venv and Create gunicorn systemd file<br/>
 run <b>deactivate</b>. The (venv) on terminal line should be gone<br/>
 run <b> sudo nano /etc/systemd/system/gunicorn.service</b><br>
+Paste the following and be sure to update your project name, path and username accordingly:<br/>
+
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=username
+Group=www-data
+WorkingDirectory=/home/username/URLShortnerProject
+ExecStart=/home/username/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/username/URLShortnerProject/URLShortnerProject.sock URLShortnerProject.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
 
