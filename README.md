@@ -48,7 +48,7 @@ Set permit root login to no and uncomment passwordauthentication and set it to n
 Step 10: Reboot the server<br/>
 run <b>sudo reboot</b>
 
-
+### Deploy Django Project to Server
 
 
 
