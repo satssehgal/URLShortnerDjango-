@@ -54,5 +54,6 @@ run <b>sudo reboot</b>
 
 ### Deploy Django Project to Server
 
-
+Step 11: Transfer Django project from local computer to server<br/>
+run <b>scp -r {local path to project folder}  username@IP:~/</b>
 
