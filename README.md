@@ -97,14 +97,16 @@ WantedBy=multi-user.target
 ```
 
 Step 18: Run the following commands to enable gunicorn:<br/>
-<b>```sudo systemctl start gunicorn
+<b>```
+    sudo systemctl start gunicorn
     sudo systemctl enable gunicorn
     sudo systemctl status gunicorn
     sudo systemctl daemon-reload
-    sudo systemctl restart gunicorn
-```</b>
+    sudo systemctl restart gunicorn```
+</b>
+
 Step 19: Set up NGINX with GUNICORN<br/>
-run <b>sudo nano /etc/nginx/sites-available/URLShortnerProject</b><br/>
+run <b>```sudo nano /etc/nginx/sites-available/URLShortnerProject```</b><br/>
 Paste the following and be sure update your own IP, username, path and project name<br/>
 
 ```
