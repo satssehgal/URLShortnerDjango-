@@ -34,4 +34,12 @@ Step 7: Create a limited user and give sudo privlidges<br/>
 run <b> adduser USERNAME <---pick anything here. Enter password and skip through the rest of the questions.</b><br/>
 then run <b> adduser USERNAME sudo</b>
 
+Step 8: Setup ssh keys on your local computer<br/>
+run <b>ssh-keygen -b 4096</b><br/> leave defaults<br/>
+run <b>ssh-copy-id sats@IP</b> to push them to your server<br/>
+optional: If you have multiple ssh key pairs then run <b>ssh-add ~/.ssh/{name of ssh key}</b>
+
+Step 9:
+
+
 
