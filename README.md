@@ -21,13 +21,14 @@ Step 5: Install some dependencies
 <br/>run <b>sudo apt install python-pip virtualenv ufw</b>
 
 Step 6: Set up some firewall rules and enable
-
+<b>
 sudo ufw default allow outgoing<br/>
 sudo ufw default deny incoming<br/>
 sudo ufw allow ssh<br/>
 sudo ufw allow 8000<br/>
 sudo ufw enable<br/>
-sudo ufw status (check to ensure its up and running)<br/>
+sudo ufw status (check to ensure its up and running)</b><br/>
+
 
 Step 7: Create a limited user and give sudo privlidges
 
