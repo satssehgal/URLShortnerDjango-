@@ -99,10 +99,10 @@ WantedBy=multi-user.target
 Step 18: Run the following commands to enable gunicorn:<br/>
 <b>
     ```sudo systemctl start gunicorn```<br/>
-    sudo systemctl enable gunicorn
-    sudo systemctl status gunicorn
-    sudo systemctl daemon-reload
-    sudo systemctl restart gunicorn```
+    ```sudo systemctl enable gunicorn```<br/>
+    ```sudo systemctl status gunicorn```<br/>
+    ```sudo systemctl daemon-reload```<br/>
+    ```sudo systemctl restart gunicorn```<br/>
 </b>
 
 Step 19: Set up NGINX with GUNICORN<br/>
