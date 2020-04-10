@@ -1,8 +1,10 @@
 # Custom Django URL Shortener App
 Instructions on how to build can be viewed at: https://www.youtube.com/watch?v=ctuSR6UHcuQ
-Instruction on how to deploy: Coming Soon
+<br/>Instruction on how to deploy: Coming Soon
 
 ## Deploy to a Cloud Server
+
+### Set Up Server
 
 You can use something like Linode or Digital Ocean to follow these instruction.
 
