@@ -43,7 +43,8 @@ Step 9:Remove root login and password auth<br/>
 run <b>sudo nano /etc/ssh/sshd_config</b><br/>
 Set permit root login to no and uncomment passwordauthentication and set it to no<br/>
 
-Step 10: 
+Step 10: Reboot the server<br/>
+run <b>sudo reboot</b>
 
 
 
