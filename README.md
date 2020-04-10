@@ -54,15 +54,23 @@ run <b>sudo reboot</b>
 
 ### Deploy Django Project to Server
 
-Step 11: Transfer Django project from local computer to server<br/>
+Step 11: Change to your virtualenv<br/>
+run <b>virtualenv vevn -p python3</b><br/>
+run <b>source venv/bin/activate</b><br/>
+You should now see something like (venv) on your terminal line
+
+Step 12: Transfer Django project from local computer to server<br/>
 run <b>scp -r {local path to project folder}  username@IP:~/</b>
 
-Step 12: Update settings.py. Navigate to settings.py in your project folder <br/>
+Step 13: Update settings.py. Navigate to settings.py in your project folder <br/>
 Update Allowed_Hosts =['Add Your IP or Domain Name']<br/>
 Add static root with the following command <b>STATIC_ROOT = os.path.join(BASE_DIR, ‘static')</b> to the settings file<br/>
 Save and exit
 
-Step 13: Back out to the directory that has manage.py<br/>
+Step 14: Back out to the directory that has manage.py<br/>
 Run <b>python manage.py collectstatic</b>
 
-Step 14:
+Step 15: Install Gunicorn and Nginx<br/>
+run <b> pip install gunicorn</b><br/>
+run <b> sudo apt install nginx libpq-dev</b>
+
