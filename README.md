@@ -36,10 +36,16 @@ then run <b> adduser USERNAME sudo</b>
 
 Step 8: Setup ssh keys on your local computer<br/>
 run <b>ssh-keygen -b 4096</b><br/> leave defaults<br/>
-run <b>ssh-copy-id sats@IP</b> to push them to your server<br/>
+run <b>ssh-copy-id username@IP</b> to push them to your server<br/>
 optional: If you have multiple ssh key pairs then run <b>ssh-add ~/.ssh/{name of ssh key}</b>
 
-Step 9:
+Step 9:Remove root login and password auth<br/>
+run <b>sudo nano /etc/ssh/sshd_config</b><br/>
+Set permit root login to no and uncomment passwordauthentication and set it to no<br/>
+
+Step 10: 
+
+
 
 
 
