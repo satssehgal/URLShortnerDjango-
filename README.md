@@ -137,5 +137,4 @@ Step 22: Reload Nginx and Gunicorn<br/>
 ```sudo systemctl restart gunicorn```<br/>
 ```sudo systemctl restart nginx```<br/>
 
-Now visit your ip to ensure all is working. If you have any issues please check stack overflow for your specific error code
-
+Now visit your ip and check out your django website on a cloud server
