@@ -87,22 +87,22 @@ Description=gunicorn daemon
 After=network.target
 
 [Service]
-User=username<br/>
-Group=www-data<br/>
-WorkingDirectory=/home/username/URLShortnerProject<br/>
-ExecStart=/home/username/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/username/URLShortnerProject/URLShortnerProject.sock URLShortnerProject.wsgi:application<br/>
+User=username
+Group=www-data
+WorkingDirectory=/home/username/URLShortnerProject
+ExecStart=/home/username/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/username/URLShortnerProject/URLShortnerProject.sock URLShortnerProject.wsgi:application
 
-[Install]<br/>
-WantedBy=multi-user.target<br/>
+[Install]
+WantedBy=multi-user.target
 ```
 
 Step 18: Run the following commands to enable gunicorn:<br/>
-<b>sudo systemctl start gunicorn<br/>
-sudo systemctl enable gunicorn<br/>
-sudo systemctl status gunicorn<br/>
-sudo systemctl daemon-reload<br/>
-sudo systemctl restart gunicorn</b><br/>
-
+<b>```sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+sudo systemctl daemon-reload
+sudo systemctl restart gunicorn</b>
+```
 Step 19: Set up NGINX with GUNICORN<br/>
 run <b>sudo nano /etc/nginx/sites-available/URLShortnerProject</b><br/>
 Paste the following and be sure update your own IP, username, path and project name<br/>
