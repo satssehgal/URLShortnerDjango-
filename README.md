@@ -21,19 +21,19 @@ Step 3: Set hostname for server. I used test-server. You can use whatever you wa
 <br/><b>```hostnamectl set-hostname test-server```</b>
 
 Step 4: Connect host ip and hostname
-<br/>run <b>>```nano /etc/hosts>```</b> and add your server ip, click tab and then your hostname (from step 3)
+<br/>run <b>```nano /etc/hosts>```</b> and add your server ip, click tab and then your hostname (from step 3)
 
 Step 5: Install some dependencies
-<br/>run <b>>```sudo apt install python-pip virtualenv ufw>```</b>
+<br/>run <b>```sudo apt install python-pip virtualenv ufw>```</b>
 
 Step 6: Set up some firewall rules and enable<br/>
 <b>
-sudo ufw default allow outgoing<br/>
-sudo ufw default deny incoming<br/>
-sudo ufw allow ssh<br/>
-sudo ufw allow 8000<br/>
-sudo ufw enable<br/>
-sudo ufw status (check to ensure its up and running)</b><br/>
+```sudo ufw default allow outgoing```<br/>
+```sudo ufw default deny incoming```<br/>
+```sudo ufw allow ssh```<br/>
+```sudo ufw allow 8000```<br/>
+```sudo ufw enable```<br/>
+```sudo ufw status``` (check to ensure its up and running)</b><br/>
 
 Step 7: Create a limited user and give sudo privlidges<br/>
 
