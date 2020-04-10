@@ -132,3 +132,10 @@ Step 20: Link and test nginx config
 Step 21: Change UFW Rules<br/>
 ```sudo ufw delete allow 8000```<br/>
 ```sudo ufw allow 'Nginx Full' ```<br/>
+
+Step 22: Reload Nginx and Gunicorn<br/>
+```sudo systemctl restart gunicorn```<br/>
+```sudo systemctl restart nginx```<br/>
+
+Now visit your ip to ensure all is working. If you have any issues please check stack overflow for your specific error code
+
