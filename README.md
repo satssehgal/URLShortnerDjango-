@@ -108,6 +108,7 @@ Step 18: Run the following commands to enable gunicorn:<br/>
 Step 19: Set up NGINX with GUNICORN<br/>
 run <b>```sudo nano /etc/nginx/sites-available/URLShortnerProject```</b><br/>
 Paste the following and be sure update your own IP, username, path and project name<br/>
+This covers http, https will be covered in a later tutorial<br/>
 
 ```
     server {
