@@ -106,7 +106,7 @@ Step 19: Set up NGINX with GUNICORN<br/>
 run <b>sudo nano /etc/nginx/sites-available/URLShortnerProject</b><br/>
 Paste the following and be sure update your own IP, username, path and project name<br/>
 
-'''
+```
     server {<br/>
         listen 80;<br/>
         server_name IP;<br/>
@@ -119,5 +119,5 @@ Paste the following and be sure update your own IP, username, path and project n
             proxy_pass http://unix:/home/username/URLShortnerProject/URLShortnerProject.sock;<br/>
         }<br/>
     }<br/>
-'''
+```
 
