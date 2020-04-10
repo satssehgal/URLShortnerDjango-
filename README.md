@@ -2,6 +2,10 @@
 Instructions on how to build can be viewed at: https://www.youtube.com/watch?v=ctuSR6UHcuQ
 <br/>Instruction on how to deploy: Coming Soon
 
+## Building Your First Custom App in 1 Hour
+
+This project is a great beginner friendly project. In this tutorial we walk through how to build a URL shortening service. You can check out the youtube tutorial above on a code walk through. We use django as the backend, html with bootstrap as the front end and ORM with SQLite3 for data management. All files relevant to build the application are included in this respository
+
 ## Deploy to a Cloud Server
 
 ### Set Up Server
