@@ -31,8 +31,7 @@ sudo ufw status (check to ensure its up and running)
 
 Step 7: Create a limited user and give sudo privlidges
 
-run <b> adduser USERNAME <---pick anything here. Enter password and skip through the rest of the questions.
-                                  
-then run adduser USERNAME sudo</b>
+run <b> adduser USERNAME <---pick anything here. Enter password and skip through the rest of the questions.</b>
+                                  then run <b> adduser USERNAME sudo</b>
 
 
