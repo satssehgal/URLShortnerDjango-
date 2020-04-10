@@ -15,5 +15,8 @@ Step 3: Set hostname for server. I used test-server. You can use whatever you wa
 <b>hostnamectl set-hostname test-server</b>
 
 Step 4: Connect host ip and hostname
-run <b>nano /etc/hosts</b> and add your server ip, cleck tab and then your host name
+run <b>nano /etc/hosts</b> and add your server ip, click tab and then your hostname (from step 3)
+
+Step 5: Install some dependencies
+run <b>sudo apt install python-pip virtualenv </b>
 
