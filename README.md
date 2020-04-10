@@ -14,3 +14,6 @@ Step 2: Use terminal or any ssh client to login with root and run:
 Step 3: Set hostname for server. I used test-server. You can use whatever you want.
 <b>hostnamectl set-hostname test-server</b>
 
+Step 4: Connect host ip and hostname
+run <b>nano /etc/hosts</b> and add your server ip, cleck tab and then your host name
+
