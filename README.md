@@ -63,23 +63,23 @@ Step 12: Transfer Django project from local computer to server<br/>
 run <b>```scp -r {local path to project folder}  username@IP:~/```</b>
 
 Step 13: Update settings.py. Navigate to settings.py in your project folder <br/>
-Update ```Allowed_Hosts =['Add Your IP or Domain Name']```<br/>
+Update <b>```Allowed_Hosts =['Add Your IP or Domain Name']```</b><br/>
 Add static root with the following command <b>```STATIC_ROOT = os.path.join(BASE_DIR, ‘static')```</b> to the settings file<br/>
 Save and exit
 
 Step 14: Back out to the directory that has manage.py<br/>
-Run <b>python manage.py collectstatic</b>
+Run <b>```python manage.py collectstatic```</b>
 
 Step 15: Install Gunicorn and Nginx<br/>
-run <b> pip install gunicorn</b><br/>
-run <b> sudo apt install nginx libpq-dev</b>
+run <b> ```pip install gunicorn```</b><br/>
+run <b> ```sudo apt install nginx libpq-dev```</b>
 
 Step 16: Check to see if gunicorn can host your django project. Change URLShortnerProject to whatever your project is called<br/>
-run <b>gunicorn --bind 0.0.0.0:8000 URLShortnerProject.wsgi</b>
+run <b>```gunicorn --bind 0.0.0.0:8000 URLShortnerProject.wsgi```</b>
 
 Step 17: Deactivate venv and Create gunicorn systemd file<br/>
-run <b>deactivate</b>. The (venv) on terminal line should be gone<br/>
-run <b> sudo nano /etc/systemd/system/gunicorn.service</b><br/>
+run <b>```deactivate```</b>. The (venv) on terminal line should be gone<br/>
+run <b> ```sudo nano /etc/systemd/system/gunicorn.service```</b><br/>
 Paste the following and be sure to update your project name, path and username accordingly:<br/>
 
 [Unit]<br/>
