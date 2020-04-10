@@ -96,8 +96,28 @@ ExecStart=/home/username/venv/bin/gunicorn --access-logfile - --workers 3 --bind
 WantedBy=multi-user.target<br/>
 
 Step 18: Run the following commands to enable gunicorn:<br/>
-sudo systemctl start gunicorn<br/>
+<b>sudo systemctl start gunicorn<br/>
 sudo systemctl enable gunicorn<br/>
 sudo systemctl status gunicorn<br/>
 sudo systemctl daemon-reload<br/>
-sudo systemctl restart gunicorn<br/>
+sudo systemctl restart gunicorn</b><br/>
+
+Step 19: Set up NGINX with GUNICORN<br/>
+run <b>sudo nano /etc/nginx/sites-available/URLShortnerProject</b><br/>
+Paste the following and be sure update your own IP, username, path and project name<br/>
+server {<br/>
+    listen 80;<br/>
+    server_name IP;<br/>
+
+    location = /favicon.ico { access_log off; log_not_found off; }<br/>
+    location /static/ {<br/>
+        root /home/username/URLShortnerProject;<br/>
+    }<br/>
+
+    location / {<br/>
+        include proxy_params;<br/>
+        proxy_pass http://unix:/home/username/URLShortnerProject/URLShortnerProject.sock;<br/>
+    }<br/>
+}<br/>
+
+
