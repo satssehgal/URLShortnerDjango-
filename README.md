@@ -128,3 +128,7 @@ Step 20: Link and test nginx config
 
 <br/>Link: ```sudo ln -s /etc/nginx/sites-available/URLShortnerProject /etc/nginx/sites-enabled```
 <br/>Test: ```sudo nginx -t```
+
+Step 21: Change UFW Rules<br/>
+```sudo ufw delete allow 8000```<br/>
+```sudo ufw allow 'Nginx Full' ```<br/>
