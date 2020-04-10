@@ -81,12 +81,12 @@ Step 17: Deactivate venv and Create gunicorn systemd file<br/>
 run <b>```deactivate```</b>. The (venv) on terminal line should be gone<br/>
 run <b> ```sudo nano /etc/systemd/system/gunicorn.service```</b><br/>
 Paste the following and be sure to update your project name, path and username accordingly:<br/>
+```
+[Unit]
+Description=gunicorn daemon
+After=network.target
 
-[Unit]<br/>
-Description=gunicorn daemon<br/>
-After=network.target<br/>
-
-[Service]<br/>
+[Service]
 User=username<br/>
 Group=www-data<br/>
 WorkingDirectory=/home/username/URLShortnerProject<br/>
@@ -94,6 +94,7 @@ ExecStart=/home/username/venv/bin/gunicorn --access-logfile - --workers 3 --bind
 
 [Install]<br/>
 WantedBy=multi-user.target<br/>
+```
 
 Step 18: Run the following commands to enable gunicorn:<br/>
 <b>sudo systemctl start gunicorn<br/>
