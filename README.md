@@ -24,7 +24,7 @@ Step 4: Connect host ip and hostname
 <br/>run <b>```nano /etc/hosts>```</b> and add your server ip, click tab and then your hostname (from step 3)
 
 Step 5: Install some dependencies
-<br/>run <b>```sudo apt install python-pip virtualenv ufw>```</b>
+<br/>run <b>```sudo apt install python-pip virtualenv ufw```</b>
 
 Step 6: Set up some firewall rules and enable<br/>
 <b>
