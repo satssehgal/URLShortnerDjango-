@@ -95,3 +95,9 @@ ExecStart=/home/username/venv/bin/gunicorn --access-logfile - --workers 3 --bind
 [Install]<br/>
 WantedBy=multi-user.target<br/>
 
+Step 18: Run the following commands to enable gunicorn:<br/>
+sudo systemctl start gunicorn<br/>
+sudo systemctl enable gunicorn<br/>
+sudo systemctl status gunicorn<br/>
+sudo systemctl daemon-reload<br/>
+sudo systemctl restart gunicorn<br/>
