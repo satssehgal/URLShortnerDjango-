@@ -29,11 +29,9 @@ sudo ufw allow 8000<br/>
 sudo ufw enable<br/>
 sudo ufw status (check to ensure its up and running)</b><br/>
 
+Step 7: Create a limited user and give sudo privlidges<br/>
 
-Step 7: Create a limited user and give sudo privlidges
-
-run <b> adduser USERNAME <---pick anything here. Enter password and skip through the rest of the questions.</b>
-
+run <b> adduser USERNAME <---pick anything here. Enter password and skip through the rest of the questions.</b><br/>
 then run <b> adduser USERNAME sudo</b>
 
 
