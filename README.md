@@ -97,8 +97,8 @@ WantedBy=multi-user.target
 ```
 
 Step 18: Run the following commands to enable gunicorn:<br/>
-<b>```
-    sudo systemctl start gunicorn
+<b>
+    ```sudo systemctl start gunicorn```<br/>
     sudo systemctl enable gunicorn
     sudo systemctl status gunicorn
     sudo systemctl daemon-reload
@@ -110,17 +110,17 @@ run <b>```sudo nano /etc/nginx/sites-available/URLShortnerProject```</b><br/>
 Paste the following and be sure update your own IP, username, path and project name<br/>
 
 ```
-    server {<br/>
-        listen 80;<br/>
-        server_name IP;<br/>
-        location = /favicon.ico { access_log off; log_not_found off; }<br/>
-        location /static/ {<br/>
-            root /home/username/URLShortnerProject;<br/>
-        }<br/>
-        location / {<br/>
-            include proxy_params;<br/>
-            proxy_pass http://unix:/home/username/URLShortnerProject/URLShortnerProject.sock;<br/>
-        }<br/>
-    }<br/>
+    server {
+        listen 80;
+        server_name IP;
+        location = /favicon.ico { access_log off; log_not_found off; }
+        location /static/ {
+            root /home/username/URLShortnerProject;
+        }
+        location / {
+            include proxy_params;
+            proxy_pass http://unix:/home/username/URLShortnerProject/URLShortnerProject.sock;
+        }
+    }
 ```
 
