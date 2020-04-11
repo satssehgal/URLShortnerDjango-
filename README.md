@@ -30,7 +30,7 @@ Step 6: Create a limited user and give sudo privlidges<br/>
 
 run <b> ```adduser USERNAME``` <---pick anything here. Enter password and skip through the rest of the questions.</b><br/>
 then run <b> ```adduser USERNAME sudo```</b><br/>
-    logout as root byt typing <b>```exit```</b> and log in with your username: <b>```ssh username@IP```</b>
+logout as root by typing <b>```exit```</b> and log in with your username: <b>```ssh username@IP```</b>
 
 Step 7: Set up some firewall rules and enable<br/>
 <b>
