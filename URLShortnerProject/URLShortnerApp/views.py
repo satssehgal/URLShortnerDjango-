@@ -18,7 +18,7 @@ import random
 #Declare Key Varaibles
 BASE_LIST='0123456789abcdefghijklmnopqrstuvwxyz./:'
 BASE_DICT=dict((c,idx) for idx,c in enumerate(BASE_LIST))
-service_url='friggintechnology.com'
+service_url='127.0.0.1'
 
 class FullURLView(viewsets.ModelViewSet):
 	queryset=URLData.objects.all()
