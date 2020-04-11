@@ -26,7 +26,13 @@ Step 4: Connect host ip and hostname
 Step 5: Install some dependencies
 <br/>run <b>```sudo apt install python-pip virtualenv ufw```</b>
 
-Step 6: Set up some firewall rules and enable<br/>
+Step 6: Create a limited user and give sudo privlidges<br/>
+
+run <b> ```adduser USERNAME``` <---pick anything here. Enter password and skip through the rest of the questions.</b><br/>
+then run <b> ```adduser USERNAME sudo```</b><br/>
+    logout as root byt typing <b>```exit```</b> and log in with your username: <b>```ssh username@IP```</b>
+
+Step 7: Set up some firewall rules and enable<br/>
 <b>
 ```sudo ufw default allow outgoing```<br/>
 ```sudo ufw default deny incoming```<br/>
@@ -34,11 +40,6 @@ Step 6: Set up some firewall rules and enable<br/>
 ```sudo ufw allow 8000```<br/>
 ```sudo ufw enable```<br/>
 ```sudo ufw status``` (check to ensure its up and running)</b><br/>
-
-Step 7: Create a limited user and give sudo privlidges<br/>
-
-run <b> ```adduser USERNAME``` <---pick anything here. Enter password and skip through the rest of the questions.</b><br/>
-then run <b> ```adduser USERNAME sudo```</b>
 
 Step 8: Setup ssh keys on your local computer<br/>
 run <b>```ssh-keygen -b 4096```</b><br/> leave defaults<br/>
