@@ -64,7 +64,7 @@ Step 12: Transfer Django project from local computer to server<br/>
 run <b>```scp -r {local path to project folder}  username@IP:~/```</b>
 
 Step 13: Update settings.py. Navigate to settings.py in your project folder <br/>
-Set <b>Debug=False</b><br/>
+Set <b>```Debug=False```</b><br/>
 Update <b>```Allowed_Hosts =['Add Your IP or Domain Name']```</b><br/>
 Add static root with the following command <b>```STATIC_ROOT = os.path.join(BASE_DIR, ‘static')```</b> to the settings file<br/>
 Save and exit
