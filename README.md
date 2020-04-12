@@ -1,6 +1,6 @@
 # Custom Django URL Shortener App
 Instructions on how to build project within one hour can be viewed at: https://www.youtube.com/watch?v=ctuSR6UHcuQ
-<br/>Instruction on how to deploy: Coming Soon
+<br/>Instruction on how to deploy: https://youtu.be/hYMTvK5MpQI
 
 ## Building Your First Custom App in 1 Hour
 
